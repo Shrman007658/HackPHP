@@ -26,7 +26,7 @@
             $it3=$_POST['Food3'];
             $it4=$_POST['Food4'];
             $it5=$_POST['Food5'];
-            echo "Your total Order Total is: $totc";
+            
             echo "<br>";
             $textqR="[$it1 X $it1c] 
             [$it2 X $it2c]
@@ -40,6 +40,8 @@
     $_SESSION['OrderList']=$textqR;
     echo"<br>";
     echo $_SESSION['OrderList'];
+    echo "<br> <br>";
+    echo "Your total Order Total is: $totc";
     ?>
     <br>
     <br>
@@ -47,6 +49,7 @@
     <a href="qrDisplay.php">Payment Done</a>
     <br>
     <br>
+    <a href ="index.html">Payment Unsucessfull</a>
     
 
 </body>
