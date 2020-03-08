@@ -6,10 +6,15 @@
     <title>Document</title>
 </head>
 <body>
-    Your order has been placed and request has been sent to the mentioend UPI<br>
-    Please complete the payment and show the request to the required vendor. <br><br><br>
     <?php
     session_start();
+    if(isset($_POST['UPI_ID']))
+    {
+        $upiVal=$_POST['UPI_ID'];
+    }
+    echo "Your order has been placed and request has been sent to the  UPI: $upiVal <br>
+    Please complete the payment and show the request to the required vendor. <br><br><br>";
+    
     include 'phpqrcode/phpqrcode/qrlib.php'; 
         if(isset($_POST['SendInfo']))
         {
